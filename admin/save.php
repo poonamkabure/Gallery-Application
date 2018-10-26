@@ -302,7 +302,59 @@ if($formid==9)
 	
 	
 	
+if($formid==88)
+	{
 	
+		//$category=$_POST['category'];
+		//$category_nm=$_POST['pnm'];
+		//$description=$_POST['description'];
+		//$albumid=$_POST['albumid'];
+		$photonm=$_POST['photo'];
+		
+		
+		 $name = $_FILES['thumbnail']['name'];
+		 
+								$extension = explode('.', $name);
+								$extension = end($extension);
+								$type = $_FILES['thumbnail']['type'];
+								$size = $_FILES['thumbnail']['size'] /1024/1024;
+								$nm1 = date('dmY_His');
+								$random_name =$nm1;
+								$tmp = $_FILES['thumbnail']['tmp_name'];
+								//$category = $_POST['category'];
+								$target_dir = "../images/img/";
+								//$des = $_POST['des'];
+								//$sub_cat = $_POST['sub_cat'];
+								$file = $random_name.".".$extension;
+								
+								
+								if ((strtolower($type) != "image/jpeg") && (strtolower($type) != "image/png"))
+								{
+									$message= "Image Format Not Supported !";
+
+								}
+								
+								
+									
+							else
+								{
+									move_uploaded_file($tmp, '../images/img/'.$random_name.'.'.$extension);	
+									$result= mysql_query("SET NAMES utf8");
+								
+		$sql="update album set photo='$file' where photo='$photonm'";
+	   mysql_query($sql);
+	  //echo $sql;
+		//$message="Image Uploaded Successfully!";
+		//echo $message;
+		//header('Location:post.php');
+		
+		echo "<script type='text/javascript'>
+		alert('Your Image Is Updated !');
+	    window.location.assign('updatealbumpic.php');
+	 </script>";   
+	}
+	}
+		
 	
 	
 	

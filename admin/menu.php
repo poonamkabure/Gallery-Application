@@ -37,18 +37,18 @@
                           <span>Add Images in Album</span>
                       </a>
                   </li>
-				  <!--li>
-                      <a class="" href="we_made.php">
+				  <li>
+                      <a class="" href="updateimg.php">
                           <i class="icon_genius"></i>
-                          <span>We Made</span>
+                          <span>Update Images</span>
                       </a>
                   </li>
 				  <li>
-                      <a class="" href="enq_record.php">
+                      <a class="" href="updatealbumpic.php">
                           <i class="icon_genius"></i>
-                          <span>Enquiry Record</span>
+                          <span>Update Album Image</span>
                       </a>
-                  </li-->
+                  </li>
                   <!--<li class="sub-menu">                     
                       <a href="javascript:;" class="">
                           <i class="icon_piechart"></i>
